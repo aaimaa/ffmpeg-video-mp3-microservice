@@ -2,10 +2,10 @@
 FROM python:3.10-slim-bullseye
 
 # to install os packages & preventing unnecessary packages
-RUN apt-get-update \
+RUN apt-get update \
   && apt-get install -y --no-install-recommends --no-install-suggests \
-  build-essentials default-libmysqlclient-dev \
-  && pip install --no-cach-dir --upgrade pip
+  build-essential pkg-config default-libmysqlclient-dev \
+  && pip install --no-cache-dir --upgrade pip
 
 WORKDIR /app
 COPY ./requirements.txt /app
