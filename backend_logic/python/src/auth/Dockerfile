@@ -1,6 +1,7 @@
 # base image for running python applications
 FROM python:3.10-slim-bullseye
 
+# to install os packages & preventing unnecessary packages
 RUN apt-get-update \
   && apt-get install -y --no-install-recommends --no-install-suggests \
   build-essentials default-libmysqlclient-dev \
