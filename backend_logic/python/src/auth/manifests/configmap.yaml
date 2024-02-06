@@ -1,0 +1,9 @@
+apiVersin: v1
+kind: ConfigMap
+metadata: 
+  name: auth-configmap
+data:
+  MySQL_HOST: host.minikube.internal
+  MySQL_USER: auth_user
+  MySQL_DB: auth
+  MySQL_PORT: "3306"
