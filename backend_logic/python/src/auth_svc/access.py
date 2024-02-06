@@ -1,4 +1,4 @@
-import os, reuqests
+import os, requests
 
 def login(requests):
   auth = request.authorization
@@ -16,3 +16,7 @@ def login(requests):
     return response.txt, None
   else:
     return None, (response.txt, response.status_code)
+    
+@server.route("/upload", methods=["POST"])
+def upload():
+  access, err = validate.token(request)
