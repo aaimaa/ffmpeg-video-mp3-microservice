@@ -12,17 +12,17 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSuge: 3
+      maxSurge: 3
   template:
     metadata:
       labels: 
         app: gateway
-      spec:
-        containers:
-          - name: gateway
-            image: ranjanmangla1/gateway
-            envFrom: 
-              - configMapRef:
+    spec:
+      containers:
+        - name: gateway
+          image: ranjanmangla1/gateway
+          envFrom: 
+            - configMapRef:
                 name: gateway-configmap
-              - secretRef:
+            - secretRef:
                 name: gateway-secret

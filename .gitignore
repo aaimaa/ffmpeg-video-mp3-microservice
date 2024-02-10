@@ -3,4 +3,5 @@ pyproject.toml
 replit.nix
 .replit
 .breakpoints
-*venv
+venv*
+*__pycache__
