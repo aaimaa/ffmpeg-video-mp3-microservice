@@ -29,6 +29,9 @@ def login():
 def upload():
   access, err = validate.token(request)
   
+  if err:
+    return err, 401
+  
   access = json.loads(access)
 
   if access["admin"]:
