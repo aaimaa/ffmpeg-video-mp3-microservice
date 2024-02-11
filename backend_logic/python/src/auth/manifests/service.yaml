@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: auth
 spec:
-  selector: 
+  selector:
     app: auth
   type: ClusterIP
   ports:

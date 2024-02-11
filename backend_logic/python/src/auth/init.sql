@@ -2,8 +2,7 @@ CREATE USER 'auth_user'@'localhost' IDENTIFIED BY 'Auth123';
 
 CREATE DATABASE AUTH;
 
-GRANT ALL PRIVILEGES
-ON auth.* TO 'auth_user'@'localhost';
+GRANT ALL PRIVILEGES ON AUTH.* TO 'auth_user'@'localhost';
 
 USE AUTH;
 
@@ -14,4 +13,4 @@ CREATE TABLE user (
 );
 
 INSERT INTO user (email, password)
-VALUES('ranjanmangla1@gmail.com', 'Admin123');
+VALUES('ranjan@email', 'Admin123');
